@@ -1,4 +1,3 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -32,10 +31,17 @@ public class VoadoresMain {
                     break;
             }
             //=> Chamadas Polimórficas
-            voadores.getVoador(i).voar();
-            voadores.getVoador(i).planar();
-            voadores.getVoador(i).pousar();
+            voadores.fazVoar(i);
+            voadores.fazPlanar(i);
+            voadores.fazPousar(i);
         }
+        System.out.println("Deseja remover um voador?(sim/não");
+        String resposta = scan.nextLine();
+        if(resposta.equalsIgnoreCase("sim")) {
+            System.out.println("Digite a posição do voador que deseja remover:");
+            int posicao = Integer.parseInt(scan.nextLine());
+            voadores.removeVoador(posicao);
+    }
 
     }
 
