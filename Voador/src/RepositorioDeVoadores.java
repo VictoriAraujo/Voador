@@ -8,9 +8,6 @@ public class RepositorioDeVoadores {
     public boolean adicionaVoador(Voador voador) {
         return voadores.add(voador);
     }
-    public Voador getVoador(int posicao){
-        return voadores.get(posicao);
-    }
 
     public Voador removeVoador(int posicao) {
         return voadores.remove(posicao);
